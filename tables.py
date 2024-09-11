@@ -1,5 +1,6 @@
 import numpy as np
 from scipy import stats
+from tabulate import tabulate
 
 n_features = [10,20,30]
 n_drifts= [5,7,9,11]
@@ -8,7 +9,7 @@ methods = ['GNB', 'MCS-GNB', 'MLP', 'MCS-MLP', 'HTC', 'HTC-MCS']
 
 res_clf = np.load('results_v4/res_compare_all.npy')
 print(res_clf.shape) # features, n_drifts, reps, methods, chunks-1
-res_clf = np.mean(res_clf, axis=-1) # średnia w chunkach
+res_clf = np.mean(res_clf, axis=-1) # average w chunkach
 
 mean_res = np.mean(res_clf, axis=2)
 std_res = np.std(res_clf, axis=2)
@@ -38,9 +39,7 @@ for f_id, f in enumerate(n_features):
         significantly_better = significant*better
 
         print(significantly_better)
-        
-        # rows.append(['Features: %i, Drifts: %i' % (f,d)])
-        
+                
         r = []
         r.append('F: %i, D: %i' % (f,d))
         for m_id, m in enumerate(methods):
@@ -58,8 +57,6 @@ for f_id, f in enumerate(n_features):
                 r.append(' '.join(map(str,better)))           
         rows.append(r)
 
-from tabulate import tabulate
 print(tabulate(rows, methods, tablefmt="latex"))
-# print(tabulate(rows, methods, tablefmt="simple"))
         
         

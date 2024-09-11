@@ -5,7 +5,6 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.svm import OneClassSVM
 import strlearn as sl
 from old.mcs import MCS
-from sklearn.naive_bayes import GaussianNB
 from strlearn.evaluators import TestThenTrain
 from tqdm import tqdm
 
