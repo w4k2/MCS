@@ -9,7 +9,7 @@ methods = ['GNB', 'MCS-GNB', 'MLP', 'MCS-MLP', 'HTC', 'HTC-MCS']
 
 res_clf = np.load('results_v4/res_compare_all.npy')
 print(res_clf.shape) # features, n_drifts, reps, methods, chunks-1
-res_clf = np.mean(res_clf, axis=-1) # average w chunkach
+res_clf = np.mean(res_clf, axis=-1) # average in chunks
 
 mean_res = np.mean(res_clf, axis=2)
 std_res = np.std(res_clf, axis=2)
