@@ -1,6 +1,12 @@
 # MCS
 
 ### Contents:
+
+*mcs.py* -- implementation of a method\
+*utils.py* -- utils (function for calculating drift ground truth)
+
+###
+
 *an_compare_all_accumulated.py* -- plot cumulative classification quality\
 *an_compare_all.py* -- plot classification quality throughout stream processing\
 *an_compare_tunning.py* -- plot rand index and accuracy plots for hyperparameter selection experiment\

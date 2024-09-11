@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from old.utils import find_real_drift
+from utils import find_real_drift
 
 res_clf = np.load('results_v4/res_clf.npy')
 res_concepts = np.load('results_v4/res_concepts.npy')

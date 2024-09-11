@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.ndimage import gaussian_filter1d
-from old.utils import find_real_drift
+from utils import find_real_drift
 
 n_features = [10,20,30]
 n_drifts= [5,7,9,11]

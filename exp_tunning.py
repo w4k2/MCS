@@ -3,7 +3,7 @@ import numpy as np
 from sklearn import clone
 from sklearn.svm import OneClassSVM
 import strlearn as sl
-from old.mcs import MCS
+from mcs import MCS
 from sklearn.naive_bayes import GaussianNB
 from strlearn.evaluators import TestThenTrain
 from tqdm import tqdm

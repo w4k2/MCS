@@ -4,7 +4,7 @@ from sklearn import clone
 from sklearn.neural_network import MLPClassifier
 from sklearn.svm import OneClassSVM
 import strlearn as sl
-from old.mcs import MCS
+from mcs import MCS
 from strlearn.evaluators import TestThenTrain
 from tqdm import tqdm
 
