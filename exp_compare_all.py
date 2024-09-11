@@ -9,8 +9,6 @@ from sklearn.naive_bayes import GaussianNB
 from strlearn.evaluators import TestThenTrain
 from tqdm import tqdm
 from skmultiflow.trees import HoeffdingTree
-from skmultiflow.meta import LeverageBagging
-from strlearn.ensembles import SEA, ROSE, AWE, WAE
 
 np.random.seed(122)
 
